@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from app.routers import api as apiRouter
 
+
 def application():
 
     application = FastAPI()

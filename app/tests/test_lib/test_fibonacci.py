@@ -1,6 +1,7 @@
 import unittest
 import app.lib.fibonacci.main as fibonacciLib
 
+
 class TestFibonnaciLib(unittest.TestCase):
 
     def test_isFibonacciNumber(self):
@@ -8,7 +9,6 @@ class TestFibonnaciLib(unittest.TestCase):
         for n in validFibonacciNumbers:
             isValid = fibonacciLib.isFibonacciNumber(n)
             self.assertTrue(isValid)
-
 
     def test_isNotFibonacciNumber(self):
         validFibonacciNumbers = [4, 6, 7, 9, 511, 5555, 5858]
@@ -28,7 +28,6 @@ class TestFibonnaciLib(unittest.TestCase):
         for i in range(5):
             number = fibonacciLib.getNthNumber(150 + i)
             self.assertEqual(number, sequenceOffset150[i])
-
 
 
 if __name__ == '__main__':
