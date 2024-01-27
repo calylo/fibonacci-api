@@ -5,8 +5,8 @@ from app.models.fibonacci import main as fibonacciModel
 router = APIRouter()
 
 @router.get("/fibonacci/number")
-def read_root():
-    return fibonacciModel.getNNumbers(100, 0)
+def read_root(page: int | None = 0, pageSize: int | None = 100):
+    return fibonacciModel.getNNumbers(pageSize, page * pageSize)
 
 
 @router.get("/fibonacci/number/{index}")

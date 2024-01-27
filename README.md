@@ -11,6 +11,24 @@ pip3 install "uvicorn[standard]"
 uvicorn app.main:app --reload
 ```
 
+## Endpoints
+### GET /api/v1/fibonacci/numbers
+Get a collection of fibonacci numbers
+example response:
+
+### GET /api/v1/fibonacci/numbers/{index}
+Get Nth fibonacci number
+
+## Pagination
+Any collection supports pagination using query parameters:
+- `page` page number to request, zero-indexed
+- `pageSize` number of results per page, defaults to 100
+
+example request: 
+
+`GET /api/v1/fibonacci/numbers?page=2&pageSize=15`
+
+
 
 ## Fibonacci calculation
 An nth power of matrix algorithm is implemented for efficient calculation, giving time complexity of O(Log n)
