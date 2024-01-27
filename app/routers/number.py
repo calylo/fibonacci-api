@@ -12,4 +12,3 @@ def read_root(page: int | None = 0, pageSize: int | None = 100):
 @router.get("/fibonacci/number/{index}")
 def read_item(index: int):
     return fibonacciModel.getNumber(index)
-    

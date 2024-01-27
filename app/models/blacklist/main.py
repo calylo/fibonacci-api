@@ -13,6 +13,7 @@ def addToList(n):
 
     return {"result": n}
 
+
 def getPage(page, pageSize):
 
     return {
@@ -20,3 +21,6 @@ def getPage(page, pageSize):
         "page": page,
         "pageSize": pageSize,
     }
+
+def contains(n):
+    return n in _blacklist
