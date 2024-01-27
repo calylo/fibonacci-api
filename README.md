@@ -34,6 +34,35 @@ Example response:
 }
 ```
 
+### GET /api/v1/fibonacci/blacklist
+Get blacklist collection
+
+Example response:
+```JSON
+{
+    "result": [0,3,5],
+    "page": 0,
+    "pageSize": 3
+}
+```
+
+### POST /api/v1/fibonacci/blacklist
+Add number to blacklist
+
+Example request body:
+```JSON
+{
+    "number": 5,
+}
+```
+
+Example response:
+```JSON
+{
+    "number": 5,
+}
+```
+
 ## Pagination
 Any collection supports pagination using query parameters:
 - `page` page number to request, zero-indexed
