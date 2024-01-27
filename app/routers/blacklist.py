@@ -5,7 +5,7 @@ from app.models.blacklist import postBody, main as blacklistModel
 
 router = APIRouter()
 
-@router.get("/fibonacci/blacklist")
+@router.get("/blacklist")
 def read_root(
     page: Annotated[int | None, Query(title="page number to get", ge=0)] = 0, 
     pageSize: Annotated[int | None, Query(title="page number to get", ge=1)] = 100
@@ -13,6 +13,6 @@ def read_root(
     return blacklistModel.getPage(page, pageSize)
 
 
-@router.post("/fibonacci/blacklist")
+@router.post("/blacklist")
 def create_item(item: postBody.BlacklistPostBodyModel):
     return blacklistModel.addToList(item.number)

@@ -5,7 +5,7 @@ def application():
 
     application = FastAPI()
 
-    application.include_router(apiRouter.router, prefix="/api/v1")
+    application.include_router(apiRouter.router, prefix="/api/v1/fibonacci")
 
     return application
 
