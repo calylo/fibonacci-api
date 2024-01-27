@@ -90,3 +90,5 @@ algorithm source: https://www.geeksforgeeks.org/program-for-nth-fibonacci-number
 ## Fibonacci validation
 To validate input as fibonacci numbers we take advantage of the mathematical property that if 5n^2+4 or 5n^2-4 is a perfect square
 
+## Blacklist handling
+Numbers blacklisted will be replaced with null in the output to ensure that page size matches the request and to ensure that each number returned will always have the correct index
