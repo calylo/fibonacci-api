@@ -5,8 +5,8 @@ from app.models.blacklist import postBody, main as blacklistModel
 router = APIRouter()
 
 @router.get("/fibonacci/blacklist")
-def read_root():
-    return {"status": "to be implemented"}
+def read_root(page: int | None = 0, pageSize: int | None = 100):
+    return blacklistModel.getPage(page, pageSize)
 
 
 @router.post("/fibonacci/blacklist")
