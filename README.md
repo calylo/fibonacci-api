@@ -8,5 +8,5 @@ pip3 install "uvicorn[standard]"
 
 ## run
 ```bash
-uvicorn main:app --reload
+uvicorn app.main:app --reload
 ```
