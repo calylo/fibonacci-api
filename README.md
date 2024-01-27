@@ -23,6 +23,7 @@ Example response:
     "pageSize": 5
 }
 ```
+> **_NOTE:_**  Numbers can be null. [See description](#blacklist-handling)
 
 ### GET /api/v1/fibonacci/numbers/{index}
 Get Nth fibonacci number
