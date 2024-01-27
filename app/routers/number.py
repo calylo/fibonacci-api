@@ -9,11 +9,11 @@ router = APIRouter()
 @router.get("/number")
 def read_root(
     page: Annotated[int | None, Query(title="page number to get", ge=0)] = 0,
-    pageSize: Annotated[int | None, Query(title="page number to get", ge=1)] = 100
+    page_size: Annotated[int | None, Query(title="page number to get", ge=1)] = 100
 ):
-    return fibonacciModel.getPage(page, pageSize)
+    return fibonacciModel.get_page(page, page_size)
 
 
 @router.get("/number/{index}")
 def read_item(index: int):
-    return fibonacciModel.getNumber(index)
+    return fibonacciModel.get_number(index)

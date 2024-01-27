@@ -72,11 +72,11 @@ Example response:
 ## Pagination
 Any collection supports pagination using query parameters:
 - `page` page number to request, zero-indexed
-- `pageSize` number of results per page, defaults to 100
+- `page_size` number of results per page, defaults to 100
 
 example request: 
 
-`GET /api/v1/fibonacci/numbers?page=2&pageSize=15`
+`GET /api/v1/fibonacci/numbers?page=2&page_size=15`
 
 
 

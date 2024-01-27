@@ -4,20 +4,18 @@ import app.lib.fibonacci.main as fibonacciLib
 
 class TestFibonnaciLib(unittest.TestCase):
 
-    def test_isFibonacciNumber(self):
-        validFibonacciNumbers = [0, 1, 2, 3, 5, 8, 13, 21, 34]
-        for n in validFibonacciNumbers:
-            isValid = fibonacciLib.isFibonacciNumber(n)
-            self.assertTrue(isValid)
+    def test_is_fibonacci_number(self):
+        valid_fibonacci_numbers = [0, 1, 2, 3, 5, 8, 13, 21, 34]
+        invalid_fibonacci_numbers = [4, 6, 7, 9, 511, 5555, 5858]
+        for n in valid_fibonacci_numbers:
+            is_valid = fibonacciLib.is_fibonacci_number(n)
+            self.assertTrue(is_valid)
+        for n in invalid_fibonacci_numbers:
+            is_valid = fibonacciLib.is_fibonacci_number(n)
+            self.assertFalse(is_valid)
 
-    def test_isNotFibonacciNumber(self):
-        validFibonacciNumbers = [4, 6, 7, 9, 511, 5555, 5858]
-        for n in validFibonacciNumbers:
-            isValid = fibonacciLib.isFibonacciNumber(n)
-            self.assertFalse(isValid)
-
-    def test_getNthNumber(self):
-        sequenceOffset150 = [
+    def test_get_nth_number(self):
+        sequence_offset_150 = [
             9969216677189303386214405760200,
             16130531424904581415797907386349,
             26099748102093884802012313146549,
@@ -26,8 +24,8 @@ class TestFibonnaciLib(unittest.TestCase):
         ]
 
         for i in range(5):
-            number = fibonacciLib.getNthNumber(150 + i)
-            self.assertEqual(number, sequenceOffset150[i])
+            number = fibonacciLib.get_nth_number(150 + i)
+            self.assertEqual(number, sequence_offset_150[i])
 
 
 if __name__ == '__main__':

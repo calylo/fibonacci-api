@@ -2,24 +2,24 @@ from app.lib.fibonacci import main as fibonacciLib
 from app.models.blacklist import main as blacklistModel
 
 
-def getPage(page, pageSize):
-    offset = page * pageSize
+def get_page(page, page_size):
+    offset = page * page_size
     result = []
-    for i in range(offset, pageSize + offset):
-        number = fibonacciLib.getNthNumber(i)
-        if (blacklistModel.contains(number)):
+    for i in range(offset, page_size + offset):
+        number = fibonacciLib.get_nth_number(i)
+        if blacklistModel.contains(number):
             number = None
         result.append(number)
 
     return {
         "result": result,
         "page": page,
-        "pageSize": pageSize
+        "pageSize": page_size
     }
 
 
-def getNumber(n):
+def get_number(n):
 
     return {
-        "result": fibonacciLib.getNthNumber(n),
+        "result": fibonacciLib.get_nth_number(n),
     }

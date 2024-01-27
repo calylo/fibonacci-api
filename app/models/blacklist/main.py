@@ -1,14 +1,15 @@
-from app.lib.fibonacci import main as FibonacciLib
 from fastapi import HTTPException
+
+from app.lib.fibonacci import main as FibonacciLib
 
 _blacklist = []
 
 
-def addToList(n):
-    if (not FibonacciLib.isFibonacciNumber(n)):
+def add_to_list(n):
+    if not FibonacciLib.is_fibonacci_number(n):
         raise HTTPException(status_code=400,
                             detail="Number is not in fibonacci sequence")
-    if (n in _blacklist):
+    if n in _blacklist:
         raise HTTPException(status_code=409,
                             detail="Number is already in blacklist")
     _blacklist.append(n)
@@ -17,12 +18,12 @@ def addToList(n):
     return {"result": n}
 
 
-def getPage(page, pageSize):
+def get_page(page, page_size):
 
     return {
-        "result": _blacklist[page * pageSize:page + 1 * pageSize],
+        "result": _blacklist[page * page_size:page + 1 * page_size],
         "page": page,
-        "pageSize": pageSize,
+        "pageSize": page_size,
     }
 
 
