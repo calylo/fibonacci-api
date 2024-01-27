@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 class BlacklistPostBodyModel(BaseModel):
-    number: int
+    number: int = Field(ge=0)
