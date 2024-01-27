@@ -1,10 +1,12 @@
 from fastapi import APIRouter
 
+from app.models.fibonacci import main as fibonacciModel
+
 router = APIRouter()
 
 @router.get("/fibonacci/number")
 def read_root():
-    return {"status": "to be implemented"}
+    return fibonacciModel.getNNumbers(100, 0)
 
 
 @router.get("/fibonacci/number/{index}")
