@@ -1,3 +1,18 @@
+import math
+
+def isFibonacciNumber(n):
+    nSqaured = (n * n)
+
+    return (
+        _isPerfectSquare(5 * nSqaured + 4) 
+        or _isPerfectSquare(5 * nSqaured - 4)
+    )
+
+def _isPerfectSquare(number):
+    sqaureRootOfN = round(math.sqrt(number))
+    
+    return (sqaureRootOfN * sqaureRootOfN == number)
+
 # algorithm for calculating nth fibonacci number
 # sourced from https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/
 

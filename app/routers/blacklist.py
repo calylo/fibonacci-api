@@ -11,5 +11,5 @@ def read_root():
 
 @router.post("/fibonacci/blacklist")
 def create_item(item: postBody.BlacklistPostBodyModel):
-    blacklistModel.addToList(item.number)
-    return {"result": item.number}
+    return blacklistModel.addToList(item.number)
+
