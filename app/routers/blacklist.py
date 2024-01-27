@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.models.blacklist import main as blacklistModel
+from app.models.blacklist import postBody, main as blacklistModel
 
 router = APIRouter()
 
@@ -10,6 +10,6 @@ def read_root():
 
 
 @router.post("/fibonacci/blacklist")
-def create_item(item: blacklistModel.BlacklistPostBodyModel):
+def create_item(item: postBody.BlacklistPostBodyModel):
     blacklistModel.addToList(item.number)
     return {"result": item.number}
