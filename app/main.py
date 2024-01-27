@@ -1,11 +1,11 @@
 from fastapi import FastAPI
-from app.routers import blacklist, number as apiRoutes
+from app.routers import api as apiRouter
 
 def application():
 
     application = FastAPI()
 
-    application.include_router(apiRoutes.router, prefix="/api/v1")
+    application.include_router(apiRouter.router, prefix="/api/v1")
 
     return application
 
