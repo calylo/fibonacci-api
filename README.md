@@ -11,6 +11,11 @@ pip3 install "uvicorn[standard]"
 uvicorn app.main:app --reload
 ```
 
+## test
+```bash
+python3 -m unittest app.tests.test_lib.test_fibonacci
+```
+
 ## Endpoints
 ### GET /api/v1/fibonacci/numbers
 Get a collection of fibonacci numbers
