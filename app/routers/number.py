@@ -6,7 +6,7 @@ router = APIRouter()
 
 @router.get("/fibonacci/number")
 def read_root(page: int | None = 0, pageSize: int | None = 100):
-    return fibonacciModel.getNNumbers(pageSize, page * pageSize)
+    return fibonacciModel.getPage(page, pageSize)
 
 
 @router.get("/fibonacci/number/{index}")
