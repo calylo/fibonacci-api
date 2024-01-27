@@ -14,10 +14,25 @@ uvicorn app.main:app --reload
 ## Endpoints
 ### GET /api/v1/fibonacci/numbers
 Get a collection of fibonacci numbers
-example response:
+
+Example response:
+```JSON
+{
+    "result": [0,1,1,2,3,5],
+    "page": 0,
+    "pageSize": 5
+}
+```
 
 ### GET /api/v1/fibonacci/numbers/{index}
 Get Nth fibonacci number
+
+Example response:
+```JSON
+{
+    "result": 5
+}
+```
 
 ## Pagination
 Any collection supports pagination using query parameters:

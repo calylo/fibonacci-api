@@ -9,3 +9,9 @@ def getPage(page, pageSize):
         "page": page, 
         "pageSize": pageSize
     }
+
+def getNumber(n):
+
+    return {
+        "result": fibonacciLib.getNthNumber(n), 
+    }
